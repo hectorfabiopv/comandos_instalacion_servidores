@@ -27,26 +27,26 @@ sudo apt-get install mysql-server -y
 
 
 ### Revisar el estado de los servicios
-sudo systemctl status apache2
-sudo systemctl status nginx
-sudo systemctl status mysql
+- sudo systemctl status apache2
+- sudo systemctl status nginx
+- sudo systemctl status mysql
 
 
 ### Detener un servicio
-sudo systemctl stop apache2
-sudo systemctl stop nginx
-sudo systemctl stop mysql
+- sudo systemctl stop apache2
+- sudo systemctl stop nginx
+- sudo systemctl stop mysql
 
 
 ### Iniciar un servicio
-sudo systemctl start apache2
-sudo systemctl start nginx
-sudo systemctl start mysql
+- sudo systemctl start apache2
+- sudo systemctl start nginx
+- sudo systemctl start mysql
 
 
 ### Rutas de configuración Nginx y Apache
-/etc/nginx/sites-available/default
-/etc/apache2/sites-available/000-default.conf
+- /etc/nginx/sites-available/default
+- /etc/apache2/sites-available/000-default.conf
 
 
 ### Editar archivos, guardar con CTRL + X y aceptar con Y
