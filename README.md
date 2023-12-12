@@ -3,11 +3,20 @@
 Esta es la lista de comandos que usaremos durante la práctica de servidores web
 
 ## Comenzando 🚀
+Crearemos un contenedor basados en la imagen oficial de ubuntu con el siguiente comando:
+docker run -dit --name apache -p 8080:80 ubuntu
 
-sudo apt-get update
+Podemos revisar los contenedores que hemos creado con información respecto a ellos con el siguiente comando:
+docker ps
+
+Ingresamos al contenedor para operar dentro de él:
+docker exec -it apache bash
+
+Actualizamos el listado de repositorios
+apt update
 
 ### Instalar paquete para administración de red
-sudo apt-get install net-tools -y
+apt install net-tools -y
 
 
 ### Revisar dirección IP
@@ -15,7 +24,7 @@ ifconfig
 
 
 ### Instalar Apache
-sudo apt-get install apache2 -y
+apt install apache2 -y
 
 
 ### Instalar NGINX
@@ -23,25 +32,19 @@ sudo apt-get install nginx -y
 
 
 ### Instalar servidor MySQL
-sudo apt-get install mysql-server -y
+apt install mysql-server -y
 
 
 ### Revisar el estado de los servicios
-- sudo systemctl status apache2
-- sudo systemctl status nginx
-- sudo systemctl status mysql
+service nombre_servicio status
 
 
 ### Detener un servicio
-- sudo systemctl stop apache2
-- sudo systemctl stop nginx
-- sudo systemctl stop mysql
+service nombre_servicio stop
 
 
 ### Iniciar un servicio
-- sudo systemctl start apache2
-- sudo systemctl start nginx
-- sudo systemctl start mysql
+service nombre_servicio start
 
 
 ### Rutas de configuración Nginx y Apache
